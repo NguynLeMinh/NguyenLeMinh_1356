@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transposition Cipher</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <h2 class="text-center font-weight-bold mb-4">Transposition Cipher</h2>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header bg-primary text-white">Encryption</div>
+
+            <div class="card-body">
+              <form action="/transposition_encrypt" method="POST">
+                <div class="form-group">
+                  <label>Plain Text</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="inputPlainText"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Key</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="inputKeyPlain"
+                    min="2"
+                    required
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  Encrypt
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header bg-success text-white">Decryption</div>
+
+            <div class="card-body">
+              <form action="/transposition_decrypt" method="POST">
+                <div class="form-group">
+                  <label>Cipher Text</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="inputCipherText"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Key</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="inputKeyCipher"
+                    min="2"
+                    required
+                  />
+                </div>
+
+                <button type="submit" class="btn btn-success btn-block">
+                  Decrypt
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
